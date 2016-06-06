@@ -45,8 +45,8 @@ switch
 | program.args.length =>
   program.args |> each add
 | program.yesterday =>
-  start = moment!.subtract(-1, \days).start-of \day .format \X
-  end = moment!.subtract(-1, \days).end-of \day .format \X
+  start = moment!.subtract(1, \days).start-of \day .format \X
+  end = moment!.subtract(1, \days).end-of \day .format \X
   list start, end
 | _ =>
   start = moment!.start-of \day .format \X
