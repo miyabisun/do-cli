@@ -34,7 +34,7 @@ switch
       FROM do
       WHERE created < $end
     """, {$end: end}
-    targets |> each remove
+    targets |> each (.id) >> remove
   | program.delete isnt true =>
     program.delete |> remove
     program.args |> each remove
